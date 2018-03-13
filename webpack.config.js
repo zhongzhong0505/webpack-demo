@@ -8,15 +8,17 @@ module.exports = {
     compress: true,
     port: 9000
   },
+  // context: path.resolve(__dirname, 'src'),
   mode: "development",
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    chunkFilename: '[name].bundle.js',
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
       {
-        test: /\.jsx$/, use: 'babel-loader',exclude: /node_modules/
+        test: /\.js[x]?$/, use: 'babel-loader', exclude: /node_modules/
       }
     ]
   },

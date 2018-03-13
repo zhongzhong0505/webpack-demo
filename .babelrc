@@ -1,5 +1,9 @@
 {
     "presets": [
         "react"
+    ],
+    "plugins": [
+        "syntax-dynamic-import",
+        "react-loadable/babel"
     ]
 }
